@@ -1,0 +1,161 @@
+<section class="hero py-16">
+    <div class="container mx-auto flex items-center justify-between">
+      
+        <div class="w-1/2"   >
+            <img src="/img/pngegg.png" alt="Big-pizza">
+        </div>
+        <div class="w-1/2 ml-40">
+            <!-- <h2 class="text-lg"><em>Hazlenut <br> Cafe</em></h2> -->
+         <h1 class="tagline font-bold">Hazlenut Cafe..</h1>
+            <h3 class="tagline2 text-3xl md:text-5xl font-bold">A premium and authentic food centre!</h3>
+            <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button>
+        </div>
+      
+    </div>
+</section>
+
+<div>
+    <div class="step-container">
+
+        <h1 class="heading text-5xl font-bold mb-8 text-center">How it <span>works</span></h1>
+    
+        <section class="steps">
+    
+            <div class="box">
+                <img class="boximg" src="img/step-1.jpg" alt="">
+                <h3>Choose favorite food</h3>
+            </div>
+            <div class="box">
+                <img class="boximg" src="img/step-2.jpg" alt="">
+                <h3>Free & fast delivery</h3>
+            </div>
+            <div class="box">
+                <img class="boximg" src="img/step-3.jpg" alt="">
+                <h3 >Easy payments methods</h3>
+            </div>
+            <div class="box">
+                <img class="boximg"src="img/step-4.jpg" alt="">
+                <h3> Finally, enjoy your food</h3>
+            </div>
+        
+        </section>
+    
+    </div>
+</div>
+
+<section class="menu container mx-auto py-8">
+    <h1 class="text-5xl font-bold mt-6 mb-8 text-center">Our dishes..</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 cols-gap-12 row-gap-12" >
+       <% pizzas.forEach((pizza) => { %>
+            <div class="">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="pizza">
+                <div class="text-center">              
+                    <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= pizza.price %></span>
+                        <button data-pizza="<%= JSON.stringify(pizza)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>   
+                </div>
+             </div>
+       <% }) %>
+       
+         
+    </div> 
+
+</section>
+
+
+<footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Hazlenut cafe ♥</h1>
+          
+      <h2>Contact</h2>
+      
+      <address>
+        5534 Main street In. The World 22193-10212<br>
+            
+        <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+      </address>
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+  
+          <li>
+            <a href="#">Print</a>
+          </li>
+              
+          <li>
+            <a href="#">Alternative Ads</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Known for</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Best quality</a>
+          </li>
+          
+          <li>
+            <a href="#">Top level restaurant</a>
+          </li>
+          
+          <li>
+            <a href="#">Fast Delivery</a>
+          </li>
+          
+          <li>
+            <a href="#">Multi variety foods</a>
+          </li>
+          
+          <li>
+            <a href="#">Experienced staff</a>
+          </li>
+          
+          <li>
+            <a href="#">Best chefs</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2019. All rights reserved.</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> remotely</span>
+      </div>
+    </div>
+  </footer>
